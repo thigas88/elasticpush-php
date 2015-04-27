@@ -1,6 +1,8 @@
 {
     "name": "root/elasticpush-php",
+    "type": "library",
     "description": "Biblioteca PHP para interagir com a API HTTP Elasticpush",
+    "keywords": ["elasticpush-php", "elasticpush", "rest", "realtime", "dispatcher", "publish", "events"],
     "require": {
         "guzzlehttp/guzzle": "~5.2"
     },

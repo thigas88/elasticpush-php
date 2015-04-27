@@ -9,5 +9,5 @@ $access_token = '182cebb17d71d3b2b2cd79b03dc2e74a82d687e4';
 $elasticpush = new Elasticpush($access_token, 1100);
 
 $event = $elasticpush->dispatch('elasticpush-home', 'notifications', [
-		'message' => 'testando :)'
+		'message' => 'testando 2 :)'
 ]);
