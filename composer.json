@@ -1,0 +1,18 @@
+{
+    "name": "root/elasticpush-php",
+    "description": "Biblioteca PHP para interagir com a API HTTP Elasticpush",
+    "require": {
+        "guzzlehttp/guzzle": "~5.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Kiffer",
+            "email": "andre_kiffer@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [ "lib/" ]
+    },
+    "minimum-stability": "stable"
+}
