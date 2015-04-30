@@ -15,14 +15,15 @@ class Elasticpush
 	public function __construct($token, $app_id)
 	{
 		$endpoint = $this->settings['host'] . $this->settings['api_version'] . '/apps/' . $app_id . '/';
-
+		$token = (strpos($token, ':')!==false) ? explode(':', $token) : trigger_error('Invalid token format');
 		$this->client = new Client([
 				'base_url' => $endpoint,
 				'defaults' => [
 					'headers' => [
 						'Content-Type' => 'application/json',
 						'Accept' => 'application/json',
-						'X-Token' => $token
+						'X-Token' => $token[0],
+						'X-Secret-Token' => $token[1],
 					],					
 					'connect_timeout' => 15,
 					'timeout' => 10,
