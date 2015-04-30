@@ -12,7 +12,6 @@ class Elasticpush
 			];
 
 	private $client;
-
 	public function __construct($token, $app_id)
 	{
 		$endpoint = $this->settings['host'] . $this->settings['api_version'] . '/apps/' . $app_id . '/';
@@ -31,14 +30,11 @@ class Elasticpush
 				]
 			]);
 	}
-
 	public function setClientId($client_id)
 	{
 		$this->client_id = $client_id;
 		return $this;
 	}
-
-
 	public function dispatch($channel, $event, array $data)
 	{
 		$request = [
@@ -46,6 +42,8 @@ class Elasticpush
 			'event' => $event,
 			'data' => $data
 		];
+		if(isset($this->client_id)) 
+			$request['client_id'] = $this->client_id;
 
 		$this->client->post('events', ['json' => $request, 'future' => true]);
 	}
