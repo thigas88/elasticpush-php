@@ -4,7 +4,7 @@
     "description": "Biblioteca PHP para interagir com a API HTTP Elasticpush",
     "keywords": ["elasticpush-php", "elasticpush", "rest", "tempo-real", "tempo real", "php tempo real", "realtime", "dispatcher", "publish", "events"],
     "require": {
-        "guzzlehttp/guzzle": "~5.2"
+        "guzzlehttp/guzzle": "@stable"
     },
     "license": "MIT",
     "authors": [
