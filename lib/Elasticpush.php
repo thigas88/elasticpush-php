@@ -7,7 +7,7 @@ class Elasticpush
 	const API_VERSION = 'v1';
 
 	private $settings = [
-				'host' => 'http://api.elasticpush.com/',
+				'host' => 'https://api.elasticpush.com/',
 				'api_version' => self::API_VERSION
 			];
 
