@@ -2,12 +2,15 @@
 
 require '../vendor/autoload.php';
 
-$key = '9751998fa08dea907624a815270d294118e9fc5c85be1453bd4f338acf467e01';
-$secret = 'd7cb880a62ec0a6910cb449d5c6ca60cad8e233f171ed53f2b91ff88bf99cff3';
-$elasticpush = new Elasticpush( $key . ':' . $secret, 11);
+
+$key = 'ba9f59c1d0af5f8cc3c3983717c329712b1367eea94802aaf03cea56c9659a6d';
+$secret = '72199a0a69920e01964166a7a42e4934b7c42d6269d40115ffdcd31678be1b6f';
+$elasticpush = new Elasticpush( $key . ':' . $secret, 8);
 
 $elasticpush->setClientId(0);
 
 $event = $elasticpush->dispatch('elasticpush-test', 'event-test', [
-        'message' => 'Hello world!'
+      	'message' => 'Teste',
+	'title' => 'Testando'
 ]);
+
