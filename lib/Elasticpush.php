@@ -46,6 +46,6 @@ class Elasticpush
 		if(isset($this->client_id)) 
 			$request['identifier'] = $this->client_id;
 
-		return $this->client->post('events', ['json' => $request, 'future' => true]);
+		return $this->client->post('events', ['json' => $request]);
 	}
 }
