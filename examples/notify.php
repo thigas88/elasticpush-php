@@ -3,9 +3,9 @@
 require '../vendor/autoload.php';
 
 
-$key = 'ba9f59c1d0af5f8cc3c3983717c329712b1367eea94802aaf03cea56c9659a6d';
-$secret = '72199a0a69920e01964166a7a42e4934b7c42d6269d40115ffdcd31678be1b6f';
-$elasticpush = new Elasticpush( $key . ':' . $secret, 8);
+$key = '2e4c651f7199dd10c8ed6ef56ef3337e1898b521994fafb9e2b5ec9a99a04bac';
+$secret = '169843c1d4b791ed5bb2ed2e1f90991a3f6b8dc2b40f094d84e1f4cbc70dfd5d';
+$elasticpush = new Elasticpush( $key . ':' . $secret, 2);
 
 $elasticpush->setClientId(0);
 
