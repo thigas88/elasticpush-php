@@ -9,21 +9,31 @@ composer require 'elasticpush/elasticpush-php':'dev-master'
 
 # Exemplo de uso
 
-```
+in backend
+```php
 
-$token = '2e4c651f7199dd10c8ed6';
-$secretToken = '169843c1d4b791ed5bb2e';
+$token = 'token-xxxxxxxxxx';
+$secretToken = 'secret-xxxxxxxxxx';
 $appId = 2;
 $elasticpush = (new Elasticpush(
                     sprintf('%s:%s', $token, $secretToken),
                     $appId
-                ))->setClientId(0);
+                ))->setClientId('123br');
 $event = $elasticpush->dispatch(
-    'elasticpush-test',
+    'channel-test',
     'event-test', [
-        'message' => 'Teste',
-        'title' => 'Testando'
+        'message' => 'Test'
     ]
 );
 
+```
+
+in browser
+```javascript
+var el = new Elasticpush('token-xxxxxxxxxx');
+var app = el.subscribe('channel-test');
+app.setClientId('123br');
+app.on('event-test', function(data){
+    alert(data.message);
+});
 ```
